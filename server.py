@@ -29,11 +29,6 @@ def write_to_csv(data):
 
 @app.route('/submit_form', methods=['POST', 'GET'])
 def submit_form():
-    # if request.method == 'POST':
-    # 	data = request.form.to_dict()
-    # 	print(data)
-    # 	return 'form submitted'
-    # else:
     if request.method == 'POST':
         try:
             data = request.form.to_dict()
@@ -43,30 +38,3 @@ def submit_form():
             return 'did not save to data base'
     else:
         return 'something went wrong. Try Again'
-
-
-
-# @app.route('/about')
-# def about():
-#     return render_template('about.html')
-
-# @app.route('/components')
-# def components():
-#     return render_template('components.html')
-
-# @app.route('/contact')
-# def contact():
-#     return render_template('contact.html')
-
-# @app.route('/work')
-# def work():
-#     return render_template('work.html')
-
-# @app.route('/works')
-# def works():
-#     return render_template('work.html')
-
-# @app.route('/favicon.ico')
-# def favicon():
-#     return send_from_directory(os.path.join(app.root_path, 'static'),
-#                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
